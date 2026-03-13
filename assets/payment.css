@@ -1,0 +1,62 @@
+/* =========================================
+   CSS TÙY CHỈNH RIÊNG CHO TRANG THANH TOÁN (PREMIUM CHECKOUT)
+   ========================================= */
+
+body { background-color: #f8f9fa; }
+.checkout-wrapper { margin-top: 120px; margin-bottom: 80px; }
+
+/* Bố cục Container thanh toán */
+.checkout-box {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Form Nhập liệu (Bên Trái) */
+.checkout-form-col { padding: 50px; flex: 1; min-width: 50%; }
+.step-badge {
+    width: 32px; height: 32px; 
+    background: var(--secondary-color); color: white;
+    border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+    font-size: 0.9rem; font-weight: bold; margin-right: 12px;
+}
+
+/* Floating Labels - Nhãn nổi hiện đại */
+.form-floating > .form-control { border: 1px solid #e2e8f0; border-radius: 10px; }
+.form-floating > .form-control:focus { border-color: var(--primary-color); box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1); }
+.form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label { color: var(--primary-color); font-weight: 500; }
+
+/* Thẻ Phương thức thanh toán */
+.payment-method-card {
+    border: 2px solid #e2e8f0; border-radius: 12px; cursor: pointer; transition: all 0.3s ease; padding: 20px; background: #fff; height: 100%;
+}
+.payment-method-card:hover { border-color: rgba(212, 175, 55, 0.4); background: #fafafa; }
+.btn-check:checked + .payment-method-card {
+    border-color: var(--primary-color); background: #fff;
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15);
+}
+.btn-check:checked + .payment-method-card .payment-icon { transform: scale(1.1); }
+.payment-icon { transition: transform 0.3s ease; }
+
+/* Khung số thẻ tín dụng */
+.cc-box { background: #f8fafc; border-radius: 12px; padding: 25px; border: 1px solid #e2e8f0; margin-top: 15px; }
+
+/* Tóm tắt đơn hàng (Bên Phải) */
+.checkout-summary-col {
+    background-color: var(--secondary-color);
+    color: white; padding: 50px; flex: 0 0 400px;
+}
+.sticky-summary { position: sticky; top: 100px; }
+.summary-img-wrap { border-radius: 16px; overflow: hidden; height: 220px; margin-bottom: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+.summary-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.summary-row { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.95rem; color: rgba(255,255,255,0.8); }
+.summary-row.total { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 20px; align-items: flex-end;}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .checkout-form-col, .checkout-summary-col { flex: 0 0 100%; padding: 30px 20px; }
+    .checkout-summary-col { order: -1; } /* Đưa tóm tắt lên trên khi ở mobile */
+}

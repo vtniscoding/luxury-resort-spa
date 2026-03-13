@@ -1,0 +1,20 @@
+.glass-search-bar {
+    position: absolute;
+    bottom: 5%; left: 50%; transform: translateX(-50%);
+    z-index: 10; width: 90%; max-width: 1100px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+.glass-search-bar label { color: rgba(255,255,255,0.8); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+.glass-search-bar .form-control, .glass-search-bar .form-select {
+    background: rgba(255,255,255,0.9);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-weight: 500;
+}

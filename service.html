@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Luxury Hotel - Dịch vụ & Tiện ích</title>
+
+    <!-- === BOOTSTRAP & FONT === -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@300;400;500;700&family=Cormorant+Garamond:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- === CSS === -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/header.css">
+    <link rel="stylesheet" href="./assets/footer.css">
+    <link rel="stylesheet" href="./assets/service.css">
+    <link rel="stylesheet" href="./assets/chatbox.css">
+</head>
+
+<body>
+    <!-- === SECTION: HEADER === -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <!-- === Logo === -->
+            <a class="navbar-brand d-flex align-items-center" href="homepage.html" style="color: var(--primary-color);">
+                <i class="bi bi-flower1 fs-3 me-2"></i>
+                <span class="d-flex flex-column justify-content-center" style="line-height: 1;">
+                    <span class="fw-bold"
+                        style="font-size: 1.4rem; letter-spacing: 3.5px; font-family: 'Cinzel', serif;">LUXURY</span>
+                    <span class="fw-light text-white"
+                        style="font-size: 0.6rem; letter-spacing: 4px; font-family: 'Montserrat';">RESORT &
+                        SPA</span>
+                </span>
+            </a>
+
+            <!-- === Nút menu trên điện thoại === -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- === Điều hướng === -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="homepage.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="room.html">Phòng & Giá</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="service.html">Dịch vụ</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0" id="authSection">
+                        <button class="btn-custom btn-primary-theme rounded-pill px-4 py-2" style="font-size: 0.9rem;"
+                            data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="bi bi-person me-1"></i> Đăng nhập
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- === SECTION: HEADER PHỤ === -->
+    <header class="header-sub"
+        style="background: linear-gradient(to right, rgba(19, 26, 34, 0.95) 0%, rgba(26, 37, 47, 0.8) 40%, rgba(26, 37, 47, 0.1) 100%), url('https://images.unsplash.com/photo-1563536995-c77648ba4d60?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;">
+        <div class="container relative z-index-2">
+            <!-- Breadcrumb dời lên trên cùng -->
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb luxury-breadcrumb">
+                    <li class="breadcrumb-item"><a href="homepage.html">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a href="room.html">Phòng & Giá</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Dịch Vụ</li>
+                </ol>
+            </nav>
+
+            <h1 class="main-title">Dịch Vụ<br>Giải Trí Đẳng Cấp</h1>
+            <div class="divider"></div>
+            <p class="desc">"Nâng tầm kỳ nghỉ của bạn với hệ thống tiện ích đặc quyền và không gian thư giãn tuyệt đối"
+            </p>
+        </div>
+    </header>
+
+    <!-- === SECTION: CHI TIẾT DỊCH VỤ === -->
+    <section class="luxury-service-section">
+        <div class="container">
+            <div class="text-center mb-5 pb-4">
+                <h2 class="luxury-title">Dịch vụ chuyên nghiệp</h2>
+                <p class="text-muted mt-4">"Trải nghiệm các dịch vụ năm sao tại Luxury Resort & Spa"</p>
+            </div>
+
+            <!-- === Dịch vụ 1 === -->
+            <div class="service-item row align-items-center">
+                <!-- Cột Hình Ảnh (Giữ nguyên lưới Bootstrap) -->
+                <div class="col-lg-7 col-md-12 z-1">
+                    <div class="service-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1674654658736-fb56d31118ea?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Nhà hàng Luxury" class="service-img">
+                    </div>
+                </div>
+                <!-- Cột Nội Dung -->
+                <div class="col-lg-5 col-md-12 z-2">
+                    <!-- Áp dụng class box-overlap-left để đè lên ảnh -->
+                    <div class="service-content-box box-overlap-left">
+                        <div class="service-pre-title">Tinh hoa ẩm thực</div>
+                        <h3 class="service-title">Nhà Hàng & Bar Thượng Hạng</h3>
+                        <p class="service-desc">Thưởng thức tinh hoa ẩm thực Á - Âu được chuẩn bị bởi các đầu bếp danh
+                            tiếng. Không gian lãng mạn cùng quầy bar sân thượng mang đến tầm nhìn toàn cảnh thành phố
+                            rực rỡ về đêm, lý tưởng cho những buổi tối hẹn hò hay gặp gỡ đối tác.</p>
+
+                        <div class="service-info-grid">
+                            <div class="info-item"><i class="bi bi-clock-history"></i>
+                                <div>
+                                    <h6>Giờ mở cửa</h6>
+                                    <p>06:00 - 23:00</p>
+                                </div>
+                            </div>
+                            <div class="info-item"><i class="bi bi-geo-alt"></i>
+                                <div>
+                                    <h6>Vị trí</h6>
+                                    <p>Tầng 25 & Rooftop</p>
+                                </div>
+                            </div>
+                            <div class="info-item"><i class="bi bi-cup-hot"></i>
+                                <div>
+                                    <h6>Phục vụ</h6>
+                                    <p>Buffet & A-la-carte</p>
+                                </div>
+                            </div>
+                            <div class="info-item"><i class="bi bi-people"></i>
+                                <div>
+                                    <h6>Sức chứa</h6>
+                                    <p>150 Khách</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn-luxury">Xem Thực Đơn <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- === Dịch vụ 2 === -->
+            <div class="service-item row align-items-center">
+                <!-- Cột Nội Dung nằm Trái -->
+                <div class="col-lg-5 col-md-12 order-2 order-lg-1 z-2">
+                    <!-- Áp dụng class box-overlap-right để đè lên ảnh -->
+                    <div class="service-content-box box-overlap-right">
+                        <div class="service-pre-title">Thư giãn tuyệt đối</div>
+                        <h3 class="service-title">Lotus Spa & Wellness</h3>
+                        <p class="service-desc">Thả lỏng cơ thể và tâm trí với các liệu trình massage thảo dược truyền
+                            thống. Không gian yên tĩnh, âm nhạc du dương và tinh dầu dịu nhẹ sẽ đánh thức mọi giác quan,
+                            trả lại cho bạn nguồn năng lượng tươi mới nhất.</p>
+
+                        <div class="service-info-grid">
+                            <div class="info-item"><i class="bi bi-clock-history"></i>
+                                <div>
+                                    <h6>Giờ mở cửa</h6>
+                                    <p>09:00 - 21:00</p>
+                                </div>
+                            </div>
+                            <div class="info-item"><i class="bi bi-geo-alt"></i>
+                                <div>
+                                    <h6>Vị trí</h6>
+                                    <p>Tầng 3 (Khu tĩnh lặng)</p>
+                                </div>
+                            </div>
+                            <div class="info-item"><i class="bi bi-flower1"></i>
+                                <div>
+                                    <h6>Đặc trưng</h6>
+                                    <p>Massage đá nóng</p>
+                                </div>
+                            </div>
+                            <div class="info-item"><i class="bi bi-person-check"></i>
+                                <div>
+                                    <h6>Phục vụ</h6>
+                                    <p>Phòng VIP riêng tư</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-luxury">Đặt Lịch Hẹn <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Cột Ảnh nằm Phải (order-lg-2) -->
+                <div class="col-lg-7 col-md-12 order-1 order-lg-2 z-1">
+                    <div class="service-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80"
+                            alt="Spa & Massage" class="service-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- === Dịch vụ 3 === -->
+            <div class="service-item row align-items-center">
+                <div class="col-lg-7 col-md-12 z-1">
+                    <div class="service-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1489475344893-ca9e2e8eebbc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Hồ bơi vô cực" class="service-img">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-12 z-2">
+                    <div class="service-content-box box-overlap-left">
+                        <div class="service-pre-title">Khu vực ngoài trời</div>
+                        <h3 class="service-title">Hồ Bơi Vô Cực Panorama</h3>
+                        <p class="service-desc">Đắm mình trong làn nước trong xanh tại hồ bơi vô cực lớn nhất khu vực.
+                            Đây là điểm check-in hoàn hảo để bạn đón bình minh rực rỡ và thưởng thức cocktail nhiệt đới
+                            ngay trên những chiếc ghế dài tắm nắng sang chảnh.</p>
+
+                        <div class="service-info-grid">
+                            <div class="info-item"><i class="bi bi-clock-history"></i>
+                                <div>
+                                    <h6>Giờ hoạt động</h6>
+                                    <p>06:00 - 19:00</p>
+                                </div>
+                            </div>
+                            <div class="info-item"><i class="bi bi-geo-alt"></i>
+                                <div>
+                                    <h6>Vị trí</h6>
+                                    <p>Tầng trệt, hướng biển</p>
+                                </div>
+                            </div>
+                            <div class="info-item"><i class="bi bi-cup-straw"></i>
+                                <div>
+                                    <h6>Tiện ích</h6>
+                                    <p>Pool Bar & Snack</p>
+                                </div>
+                            </div>
+                            <div class="info-item"><i class="bi bi-shield-check"></i>
+                                <div>
+                                    <h6>Điều kiện</h6>
+                                    <p>Dành riêng cho khách</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-luxury">Khám Phá Thêm <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === SECTION: FOOTER === -->
+    <footer class="footer-custom">
+        <div class="container">
+            <!-- === Newsletter === -->
+            <div class="row mb-5 align-items-center pb-5 border-bottom border-secondary">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-white mb-2">Đăng ký nhận bản tin
+                    </h5>
+                    <p class="text-muted small mb-0">Cập nhật những ưu đãi độc quyền và sự kiện mới nhất từ chúng tôi.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <form class="d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Nhập địa chỉ email của bạn..."
+                            style="background: rgba(255, 255, 255, 0.975); border: 1px solid rgba(255,255,255,0.2); color: rgb(18, 18, 18); border-radius: 50px; padding-left: 20px;">
+                        <button type="button" class="btn-custom btn-primary-theme px-4"
+                            style="border-radius: 50px; white-space: nowrap;"
+                            onclick="alert('Cảm ơn bạn đã đăng ký nhận bản tin!')">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row g-5">
+                <!-- === Social === -->
+                <div class="col-lg-4 col-md-6">
+                    <!-- === Logo === -->
+                    <a class="navbar-brand d-flex align-items-center" href="homepage.html"
+                        style="color: var(--primary-color);">
+                        <i class="bi bi-flower1 fs-3 me-2"></i>
+                        <span class="d-flex flex-column justify-content-center" style="line-height: 1;">
+                            <span class="fw-bold"
+                                style="font-size: 1.4rem; letter-spacing: 3.5px; font-family: 'Cinzel', serif;">LUXURY</span>
+                            <span class="fw-light text-white"
+                                style="font-size: 0.6rem; letter-spacing: 4px; font-family: 'Montserrat';">RESORT &
+                                SPA</span>
+                        </span>
+                    </a>
+                    <p class="text-muted small mt-4">Tự hào là điểm đến lý tưởng cho những kỳ nghỉ
+                        trọn vẹn. Chúng tôi mang đến không gian kiến trúc độc bản, dịch vụ tận tâm và những trải nghiệm
+                        vượt xa sự mong đợi.</p>
+
+                    <!-- === Social Icon === -->
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="text-muted fs-5 footer-social-icon" title="Facebook"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-muted fs-5 footer-social-icon" title="Instagram"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-muted fs-5 footer-social-icon" title="TripAdvisor"><i
+                                class="bi bi-globe"></i></a>
+                        <a href="#" class="text-muted fs-5 footer-social-icon" title="YouTube"><i
+                                class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- === Links === -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mt-2 text-white text-uppercase">Khám phá</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="homepage.html" class="text-muted small">Về chúng tôi</a></li>
+                        <li class="mb-2"><a href="room.html" class="text-muted small">Phòng & Suite</a></li>
+                        <li class="mb-2"><a href="service.html" class="text-muted small">Nhà hàng & Bar</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted small">Spa & Wellness</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted small">Thư viện ảnh</a></li>
+                    </ul>
+                </div>
+
+                <!-- === Policies === -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold fw-bold mt-2 text-white text-uppercase">Hỗ trợ khách hàng
+                    </h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted small">Điều khoản sử dụng</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted small">Chính sách bảo mật</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted small">Quy định hoàn / hủy</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted small">Câu hỏi thường gặp</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted small">Hướng dẫn thanh toán</a></li>
+                    </ul>
+                </div>
+
+                <!-- === Contact === -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold fw-bold mt-2 text-white text-uppercase" style="letter-spacing: 1px;">Liên hệ</h6>
+                    <ul class="list-unstyled text-muted small">
+                        <li class="mb-2 d-flex align-items-start">
+                            <i class="bi bi-geo-alt me-3 fs-5" style="color: var(--primary-color);"></i>
+                            <span>123 Đường Biển, Quận Sơn Trà,<br>Thành phố Nghỉ Dưỡng, VN</span>
+                        </li>
+                        <li class="mb-2 d-flex align-items-center">
+                            <i class="bi bi-telephone me-3 fs-5" style="color: var(--primary-color);"></i>
+                            <span>+84 1900 1234<br>+84 236 312 3456</span>
+                        </li>
+                        <li class="mb-2 d-flex align-items-center">
+                            <i class="bi bi-envelope me-3 fs-5" style="color: var(--primary-color);"></i>
+                            <span>reservation@luxuryhotel.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- === Copyright & Payment === -->
+            <div class="row align-items-center border-top border-secondary mt-5 pt-4">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="text-muted small mb-0">&copy; 2026 Luxury Resort & Spa. Bản quyền thuộc về Luxury Group.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="d-flex gap-3 justify-content-center justify-content-md-end text-white opacity-75 fs-4">
+                        <i class="bi bi-credit-card" title="Visa / Mastercard"></i>
+                        <i class="bi bi-paypal" title="PayPal"></i>
+                        <i class="bi bi-wallet2" title="Ví Điện Tử"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- === CHAT ICON  === -->
+    <div class="chat-widget-btn" onclick="toggleChat()" id="chatBtn">
+        <i class="bi bi-chat-dots-fill"></i>
+    </div>
+
+    <!-- === CHATBOX === -->
+    <div class="chat-window" id="chatWindow">
+        <!-- === Header Chat === -->
+        <div class="chat-header">
+            <div class="chat-header-title">
+                <i class="bi bi-headset"></i> Trợ lý Luxury Hotel
+            </div>
+            <i class="bi bi-x-lg close-chat" onclick="toggleChat()"></i>
+        </div>
+
+        <!-- === Nội dung tin nhắn === -->
+        <div class="chat-body" id="chatBody">
+            <div class="chat-msg bot">
+                Kính chào quý khách! Mình là trợ lý ảo của Luxury Hotel. Mình có thể hỗ trợ gì cho kỳ nghỉ của quý khách
+                ạ? (Gợi ý: Hỏi về <strong>giá phòng</strong>, <strong>địa chỉ</strong>, hoặc <strong>dịch vụ</strong>)
+            </div>
+            <!-- === Hiệu ứng Bot đang gõ chữ (Mặc định ẩn) === -->
+            <div class="typing-indicator" id="typingIndicator">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <!-- === Khung nhập tin nhắn === -->
+        <div class="chat-footer">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Nhập tin nhắn..."
+                onkeypress="handleEnter(event)">
+            <button class="chat-send-btn" onclick="sendMessage()"><i class="bi bi-send-fill"></i></button>
+        </div>
+    </div>
+
+    <!-- BOOTSTRAP & SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <script src="./assets/auth.js"></script>
+    <script src="./assets/chat.js"></script>
+</body>
+
+</html>

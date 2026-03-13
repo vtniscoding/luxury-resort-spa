@@ -1,0 +1,147 @@
+.slider-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.slider-section .carousel-item {
+    height: 100vh;
+    background-color: #000;
+}
+
+/* Image Zoom */
+.slider-section .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3; 
+    transform: scale(1);
+    transition: transform 6s ease-in-out;
+}
+
+.slider-section .carousel-item.active img {
+    transform: scale(1.05);
+}
+
+/* Overlay */
+.slider-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(180deg, rgb(0, 0, 0.6) 0%, rgb(0, 0, 0.6) 50%, rgba(26,37,47,0.95) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Caption */
+.slider-section .carousel-caption {
+    top: 42%; 
+    transform: translateY(-50%);
+    bottom: auto;
+    z-index: 2;
+}
+
+/* Text Animation */
+.slider-slogan, .slider-title, .slider-btn-wrap {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+/* Độ trễ xuất hiện để tạo hiệu ứng mượt (Stagger effect) */
+.slider-section .carousel-item.active .slider-slogan {
+    opacity: 1; transform: translateY(0); transition-delay: 0.3s;
+}
+.slider-section .carousel-item.active .slider-title {
+    opacity: 1; transform: translateY(0); transition-delay: 0.5s;
+}
+.slider-section .carousel-item.active .slider-btn-wrap {
+    opacity: 1; transform: translateY(0); transition-delay: 0.7s;
+}
+
+/* Định dạng Slogan */
+.slider-slogan {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 4px; 
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9); /* Trắng hơi mờ một chút cho thanh lịch */
+}
+
+/* Định dạng Tiêu đề chính */
+.slider-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    font-weight: 650;
+    line-height: 1;
+    margin-bottom: 35px;
+    word-spacing: 12px;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+/* Nút bấm Call-to-action trên Slider */
+.btn-slider {
+    display: inline-block;
+    padding: 14px 40px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.2); /* Nền nút hơi đen mờ */
+    backdrop-filter: blur(5px);
+    transition: all 0.4s ease;
+    border-radius: 50px;
+}
+.btn-slider:hover {
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* Tùy chỉnh thanh chỉ báo (Indicators) */
+.slider-section .carousel-indicators {
+    margin-bottom: 20vh; 
+    z-index: 3;
+}
+.slider-section .carousel-indicators [data-bs-target] {
+    width: 40px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    transition: all 0.3s ease;
+}
+.slider-section .carousel-indicators .active {
+    width: 60px;
+    background-color: #fff;
+}
+
+/* Tùy chỉnh nút Next/Prev */
+.slider-section .carousel-control-prev, 
+.slider-section .carousel-control-next {
+    z-index: 3;
+    width: 8%;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+.slider-section .carousel-control-prev:hover, 
+.slider-section .carousel-control-next:hover {
+    opacity: 1;
+}
+.slider-section .control-icon {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+    .slider-title { font-size: 2.8rem; }
+    .slider-slogan { font-size: 0.75rem; letter-spacing: 3px; }
+    .slider-section .carousel-caption { top: 40%; }
+    .slider-section .carousel-indicators { margin-bottom: 22vh; }
+}

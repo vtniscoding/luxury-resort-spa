@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Luxury Hotel - Trải nghiệm nghỉ dưỡng đẳng cấp</title>
+
+    <!-- === BOOTSTRAP & FONT === -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@300;400;500;700&family=Cormorant+Garamond:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- === CSS === -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/header.css">
+    <link rel="stylesheet" href="./assets/footer.css">
+    <link rel="stylesheet" href="./assets/slider.css">
+    <link rel="stylesheet" href="./assets/glass_search.css">
+    <link rel="stylesheet" href="./assets/chatbox.css">
+</head>
+
+<body>
+    <!-- === SECTION: HEADER === -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <!-- === Logo === -->
+            <a class="navbar-brand d-flex align-items-center" href="homepage.html" style="color: var(--primary-color);">
+                <i class="bi bi-flower1 fs-3 me-2"></i>
+                <span class="d-flex flex-column justify-content-center" style="line-height: 1;">
+                    <span class="fw-bold"
+                        style="font-size: 1.4rem; letter-spacing: 3.5px; font-family: 'Cinzel', serif;">LUXURY</span>
+                    <span class="fw-light text-white"
+                        style="font-size: 0.6rem; letter-spacing: 4px; font-family: 'Montserrat';">RESORT &
+                        SPA</span>
+                </span>
+            </a>
+
+            <!-- === Nút menu trên điện thoại === -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- === Điều hướng === -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link active" href="homepage.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="room.html">Phòng & Giá</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Dịch vụ</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0" id="authSection">
+                        <button class="btn-custom btn-primary-theme rounded-pill px-4 py-2" style="font-size: 0.9rem;"
+                            data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="bi bi-person me-1"></i> Đăng nhập
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- === SECTION: SLIDER & TÌM KIẾM ===  -->
+    <div class="slider-section">
+        <div class="slider-overlay"></div>
+        <div id="hotelSlider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000">
+            <!-- === Chỉ mục === -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#hotelSlider" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#hotelSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#hotelSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <!-- === Slide 1 === -->
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=2000&auto=format&fit=crop"
+                        alt="Luxury Hotel">
+                    <div class="carousel-caption">
+                        <p class="slider-slogan">Chào mừng đến với sự hoàn mỹ</p>
+                        <h1 class="slider-title">Định Nghĩa Lại<br>Sự Sang Trọng</h1>
+                        <div class="slider-btn-wrap">
+                            <a href="#kham-pha" class="btn-slider">Khám Phá Ngay</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- === Slide 2 === -->
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2000&auto=format&fit=crop"
+                        alt="Ocean View Room">
+                    <div class="carousel-caption">
+                        <p class="slider-slogan">Tầm nhìn hướng biển tuyệt đẹp</p>
+                        <h1 class="slider-title">Trải Nghiệm<br>Không Gian Vô Tận</h1>
+                        <div class="slider-btn-wrap">
+                            <a href="room.html" class="btn-slider">Xem Phòng</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- === Slide 3 === -->
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2000&auto=format&fit=crop"
+                        alt="Fine Dining">
+                    <div class="carousel-caption">
+                        <p class="slider-slogan">Ẩm thực tinh hoa</p>
+                        <h1 class="slider-title">Đánh Thức<br>Mọi Giác Quan</h1>
+                        <div class="slider-btn-wrap">
+                            <a href="service.html" class="btn-slider">Đặt Bàn Ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- === Nút chuyển slide === -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#hotelSlider" data-bs-slide="prev">
+                <i class="bi bi-chevron-left control-icon"></i>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#hotelSlider" data-bs-slide="next">
+                <i class="bi bi-chevron-right control-icon"></i>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- === Thanh tìm kiếm === -->
+        <div class="glass-search-bar">
+            <form class="row g-3 align-items-end">
+                <div class="col-lg-3 col-md-6">
+                    <label class="fw-bold">Nhận phòng</label>
+                    <input type="date" class="form-control">
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <label class="fw-bold">Trả phòng</label>
+                    <input type="date" class="form-control">
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <label class="fw-bold">Khách & Phòng</label>
+                    <select class="form-select">
+                        <option value="1">1 Người lớn, 1 Phòng</option>
+                        <option value="2" selected>2 Người lớn, 1 Phòng</option>
+                        <option value="3" selected>3 Người, 1 Phòng</option>
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-6 d-grid">
+                    <button type="button" class="btn-custom btn-primary-theme" style="padding: 12px;"
+                        onclick="window.location.href='room.html'">Kiểm tra phòng trống</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- === SECTION: DỊCH VỤ NỔI BẬT=== -->
+    <section class="container pt-5 pb-4 mt-2">
+        <div class="row text-center g-4">
+            <div class="col-md-4">
+                <i class="bi bi-cup-hot amenity-icon"></i>
+                <h5 class="fw-bold" style="color: var(--secondary-color);">Ẩm Thực Tinh Hoa</h5>
+                <p class="text-muted small px-3">Thưởng thức thực đơn đa dạng được chuẩn bị bởi các đầu bếp sao
+                    Michelin.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-water amenity-icon"></i>
+                <h5 class="fw-bold" style="color: var(--secondary-color);">Hồ Bơi Vô Cực</h5>
+                <p class="text-muted small px-3">Thư giãn tuyệt đối tại hồ bơi tràn viền với tầm nhìn panorama ôm trọn
+                    đại dương.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-leaf amenity-icon"></i>
+                <h5 class="fw-bold" style="color: var(--secondary-color);">Spa & Wellness</h5>
+                <p class="text-muted small px-3">Tái tạo năng lượng với các liệu pháp massage truyền thống và hiện đại.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- === SECTION: PHÒNG NỔI BẬT === -->
+    <section class="bg-light py-1">
+        <div class="container py-5">
+            <div class="text-center mb-5 pb-3">
+                <h2 class="luxury-title">Không Gian Nghỉ Dưỡng</h2>
+                <p class="text-muted mt-4">Sự kết hợp hoàn hảo giữa kiến trúc đương đại và nét đẹp bản địa</p>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <div class="card room-card-minimal">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80"
+                                class="w-100" alt="Deluxe Room">
+                            <span
+                                class="badge bg-white text-dark position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow-sm">Hot</span>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="room-title">Phòng Deluxe Hướng Biển</h4>
+                            <div class="d-flex gap-3 text-muted small mb-3">
+                                <span><i class="bi bi-arrows-fullscreen me-1"></i> 45m²</span>
+                                <span><i class="bi bi-people me-1"></i> 2 Khách</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-4">
+                                <div class="room-price">1.500.000₫ <span class="text-muted fw-normal"
+                                        style="font-size: 0.8rem;">/ đêm</span></div>
+                                <a href="room.html" class="text-decoration-none fw-bold"
+                                    style="color: var(--secondary-color);">Chi tiết <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card room-card-minimal">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=800&q=80"
+                                class="w-100" alt="Suite Room">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="room-title">Phòng Suite Cao Cấp</h4>
+                            <div class="d-flex gap-3 text-muted small mb-3">
+                                <span><i class="bi bi-arrows-fullscreen me-1"></i> 70m²</span>
+                                <span><i class="bi bi-people me-1"></i> 2 Khách</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-4">
+                                <div class="room-price">3.200.000₫ <span class="text-muted fw-normal"
+                                        style="font-size: 0.8rem;">/ đêm</span></div>
+                                <a href="room.html" class="text-decoration-none fw-bold"
+                                    style="color: var(--secondary-color);">Chi tiết <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card room-card-minimal">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80"
+                                class="w-100" alt="Family Room">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="room-title">Phòng Family Suite</h4>
+                            <div class="d-flex gap-3 text-muted small mb-3">
+                                <span><i class="bi bi-arrows-fullscreen me-1"></i> 90m²</span>
+                                <span><i class="bi bi-people me-1"></i> 4 Khách</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-4">
+                                <div class="room-price">4.500.000₫ <span class="text-muted fw-normal"
+                                        style="font-size: 0.8rem;">/ đêm</span></div>
+                                <a href="room.html" class="text-decoration-none fw-bold"
+                                    style="color: var(--secondary-color);">Chi tiết <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <button class="btn-custom btn-outline-theme px-5 py-3 rounded-pill"
+                    onclick="window.location.href='room.html'">Xem toàn bộ phòng</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- === SECTION: FOOTER === -->
+    <footer class="footer-custom">
+        <div class="container">
+            <!-- === Newsletter === -->
+            <div class="row mb-5 align-items-center pb-5 border-bottom border-secondary">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-white mb-2">Đăng ký nhận bản tin
+                    </h5>
+                    <p class="text-muted small mb-0">Cập nhật những ưu đãi độc quyền và sự kiện mới nhất từ chúng tôi.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <form class="d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Nhập địa chỉ email của bạn..."
+                            style="background: rgba(255, 255, 255, 0.975); border: 1px solid rgba(255,255,255,0.2); color: rgb(18, 18, 18); border-radius: 50px; padding-left: 20px;">
+                        <button type="button" class="btn-custom btn-primary-theme px-4"
+                            style="border-radius: 50px; white-space: nowrap;"
+                            onclick="alert('Cảm ơn bạn đã đăng ký nhận bản tin!')">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row g-5">
+                <!-- === Social === -->
+                <div class="col-lg-4 col-md-6">
+                    <!-- === Logo === -->
+                    <a class="navbar-brand d-flex align-items-center" href="homepage.html"
+                        style="color: var(--primary-color);">
+                        <i class="bi bi-flower1 fs-3 me-2"></i>
+                        <span class="d-flex flex-column justify-content-center" style="line-height: 1;">
+                            <span class="fw-bold"
+                                style="font-size: 1.4rem; letter-spacing: 3.5px; font-family: 'Cinzel', serif;">LUXURY</span>
+                            <span class="fw-light text-white"
+                                style="font-size: 0.6rem; letter-spacing: 4px; font-family: 'Montserrat';">RESORT &
+                                SPA</span>
+                        </span>
+                    </a>
+                    <p class="text-muted small mt-4">Tự hào là điểm đến lý tưởng cho những kỳ nghỉ
+                        trọn vẹn. Chúng tôi mang đến không gian kiến trúc độc bản, dịch vụ tận tâm và những trải nghiệm
+                        vượt xa sự mong đợi.</p>
+
+                    <!-- === Social Icon === -->
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="text-muted fs-5 footer-social-icon" title="Facebook"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-muted fs-5 footer-social-icon" title="Instagram"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-muted fs-5 footer-social-icon" title="TripAdvisor"><i
+                                class="bi bi-globe"></i></a>
+                        <a href="#" class="text-muted fs-5 footer-social-icon" title="YouTube"><i
+                                class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- === Links === -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mt-2 text-white text-uppercase">Khám phá</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="homepage.html" class="text-muted small">Về chúng tôi</a></li>
+                        <li class="mb-2"><a href="room.html" class="text-muted small">Phòng & Suite</a></li>
+                        <li class="mb-2"><a href="service.html" class="text-muted small">Nhà hàng & Bar</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted small">Spa & Wellness</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted small">Thư viện ảnh</a></li>
+                    </ul>
+                </div>
+
+                <!-- === Policies === -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold fw-bold mt-2 text-white text-uppercase">Hỗ trợ khách hàng
+                    </h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted small">Điều khoản sử dụng</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted small">Chính sách bảo mật</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted small">Quy định hoàn / hủy</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted small">Câu hỏi thường gặp</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted small">Hướng dẫn thanh toán</a></li>
+                    </ul>
+                </div>
+
+                <!-- === Contact === -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold fw-bold mt-2 text-white text-uppercase" style="letter-spacing: 1px;">Liên hệ</h6>
+                    <ul class="list-unstyled text-muted small">
+                        <li class="mb-2 d-flex align-items-start">
+                            <i class="bi bi-geo-alt me-3 fs-5" style="color: var(--primary-color);"></i>
+                            <span>123 Đường Biển, Quận Sơn Trà,<br>Thành phố Nghỉ Dưỡng, VN</span>
+                        </li>
+                        <li class="mb-2 d-flex align-items-center">
+                            <i class="bi bi-telephone me-3 fs-5" style="color: var(--primary-color);"></i>
+                            <span>+84 1900 1234<br>+84 236 312 3456</span>
+                        </li>
+                        <li class="mb-2 d-flex align-items-center">
+                            <i class="bi bi-envelope me-3 fs-5" style="color: var(--primary-color);"></i>
+                            <span>reservation@luxuryhotel.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- === Copyright & Payment === -->
+            <div class="row align-items-center border-top border-secondary mt-5 pt-4">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="text-muted small mb-0">&copy; 2026 Luxury Resort & Spa. Bản quyền thuộc về Luxury Group.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="d-flex gap-3 justify-content-center justify-content-md-end text-white opacity-75 fs-4">
+                        <i class="bi bi-credit-card" title="Visa / Mastercard"></i>
+                        <i class="bi bi-paypal" title="PayPal"></i>
+                        <i class="bi bi-wallet2" title="Ví Điện Tử"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- === CHAT ICON  === -->
+    <div class="chat-widget-btn" onclick="toggleChat()" id="chatBtn">
+        <i class="bi bi-chat-dots-fill"></i>
+    </div>
+
+    <!-- === CHATBOX === -->
+    <div class="chat-window" id="chatWindow">
+        <!-- === Header Chat === -->
+        <div class="chat-header">
+            <div class="chat-header-title">
+                <i class="bi bi-headset"></i> Trợ lý Luxury Hotel
+            </div>
+            <i class="bi bi-x-lg close-chat" onclick="toggleChat()"></i>
+        </div>
+
+        <!-- === Nội dung tin nhắn === -->
+        <div class="chat-body" id="chatBody">
+            <div class="chat-msg bot">
+                Kính chào quý khách! Mình là trợ lý ảo của Luxury Hotel. Mình có thể hỗ trợ gì cho kỳ nghỉ của quý khách
+                ạ? (Gợi ý: Hỏi về <strong>giá phòng</strong>, <strong>địa chỉ</strong>, hoặc <strong>dịch vụ</strong>)
+            </div>
+            <!-- === Hiệu ứng Bot đang gõ chữ (Mặc định ẩn) === -->
+            <div class="typing-indicator" id="typingIndicator">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <!-- === Khung nhập tin nhắn === -->
+        <div class="chat-footer">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Nhập tin nhắn..."
+                onkeypress="handleEnter(event)">
+            <button class="chat-send-btn" onclick="sendMessage()"><i class="bi bi-send-fill"></i></button>
+        </div>
+    </div>
+
+    <!-- === BOOTSTRAP & SCRIPT === -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <script src="./assets/auth.js"></script>
+    <script src="./assets/chat.js"></script>
+
+</body>
+
+</html>

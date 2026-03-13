@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán - Luxury Hotel</title>
+
+    <!-- === BOOTSTRAP & FONT === -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        xintegrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- === CSS HỆ THỐNG === -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/header.css">
+    <link rel="stylesheet" href="./assets/footer.css">
+    <link rel="stylesheet" href="./assets/payment.css">
+    <link rel="stylesheet" href="./assets/chatbox.css">
+</head>
+
+<body>
+    <!-- === SECTION: HEADER === -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="homepage.html" style="color: var(--primary-color);">
+                <i class="bi bi-flower1 fs-3 me-2"></i>
+                <span class="d-flex flex-column justify-content-center" style="line-height: 1;">
+                    <span class="fw-bold" style="font-size: 1.4rem; letter-spacing: 3.5px; font-family: 'Cinzel', serif;">LUXURY</span>
+                    <span class="fw-light text-white" style="font-size: 0.6rem; letter-spacing: 4px; font-family: 'Montserrat';">RESORT & SPA</span>
+                </span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="homepage.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="room.html">Phòng & Giá</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Dịch vụ</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0" id="authSection">
+                        <button class="btn-custom btn-primary-theme rounded-pill px-4 py-2" style="font-size: 0.9rem;" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="bi bi-person me-1"></i> Đăng nhập
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- === SECTION: FORM THANH TOÁN === -->
+    <div class="container checkout-wrapper">
+        <!-- === Nút quay lại trang chọn phòng === -->
+        <a href="room.html" class="text-decoration-none text-muted mb-4 d-inline-flex align-items-center">
+            <i class="bi bi-arrow-left fs-5 me-2"></i> Trở về trang chọn phòng
+        </a>
+
+        <div class="checkout-box">
+            <!-- === FORM NHẬP LIỆU === -->
+            <div class="checkout-form-col">
+                <h3 class="mb-5 fw-bold" style="color: var(--secondary-color);">Hoàn tất đặt phòng</h3>
+                <form id="checkoutForm" class="needs-validation" novalidate>
+                    
+                    <!-- ==- Thông tin liên hệ === -->
+                    <div class="d-flex align-items-center mb-4">
+                        <span class="step-badge">1</span>
+                        <h5 class="mb-0 fw-bold text-dark">Thông tin liên hệ</h5>
+                    </div>
+                    <div class="row g-3 mb-5">
+                        <div class="col-md-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="fullName" placeholder="Họ và tên" required>
+                                <label for="fullName">Họ và tên người nhận phòng</label>
+                                <div class="invalid-feedback">Vui lòng nhập họ tên.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                <label for="email">Địa chỉ Email</label>
+                                <div class="invalid-feedback">Vui lòng nhập email hợp lệ.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="tel" class="form-control" id="phone" placeholder="Số điện thoại" required>
+                                <label for="phone">Số điện thoại</label>
+                                <div class="invalid-feedback">Vui lòng nhập số điện thoại.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- === Thông tin lưu trú === -->
+                    <div class="d-flex align-items-center mb-4">
+                        <span class="step-badge">2</span>
+                        <h5 class="mb-0 fw-bold text-dark">Chi tiết lưu trú</h5>
+                    </div>
+                    <div class="row g-3 mb-5">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="date" id="checkinInput" class="form-control" required>
+                                <label for="checkinInput">Ngày nhận phòng</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="date" id="checkoutInput" class="form-control" required>
+                                <label for="checkoutInput">Ngày trả phòng</label>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-3">
+                            <div class="form-floating">
+                                <textarea class="form-control" id="notes" placeholder="Ghi chú" style="height: 80px"></textarea>
+                                <label for="notes">Yêu cầu đặc biệt (Tùy chọn)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- === Thanh toán === -->
+                    <div class="d-flex align-items-center mb-4">
+                        <span class="step-badge">3</span>
+                        <h5 class="mb-0 fw-bold text-dark">Phương thức thanh toán</h5>
+                    </div>
+                    <div class="row g-3 mb-2">
+                        <!-- === Card Option === -->
+                        <div class="col-md-6">
+                            <input type="radio" class="btn-check" name="paymentMethod" id="creditCard" value="card" autocomplete="off" checked>
+                            <label class="d-flex align-items-start payment-method-card" for="creditCard">
+                                <i class="bi bi-credit-card-2-front-fill fs-3 payment-icon me-3" style="color: var(--secondary-color);"></i>
+                                <div>
+                                    <h6 class="mb-1 fw-bold text-dark">Thẻ tín dụng</h6>
+                                    <small class="text-muted d-block">Visa, Mastercard, JCB</small>
+                                </div>
+                            </label>
+                        </div>
+                        <!-- === MoMo Option === -->
+                        <div class="col-md-6">
+                            <input type="radio" class="btn-check" name="paymentMethod" id="momo" value="momo" autocomplete="off">
+                            <label class="d-flex align-items-start payment-method-card" for="momo">
+                                <i class="bi bi-wallet2 fs-3 payment-icon me-3" style="color: #a50064;"></i>
+                                <div>
+                                    <h6 class="mb-1 fw-bold text-dark">Ví điện tử MoMo</h6>
+                                    <small class="text-muted d-block">Quét mã QR cực nhanh</small>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- === Khung điền thẻ Tín dụng === -->
+                    <div id="cardDetails" class="row g-3 cc-box mb-4">
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" placeholder="0000 0000 0000 0000" id="ccNumber">
+                                <label>Số thẻ tín dụng</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" placeholder="MM/YY" id="ccExpiry">
+                                <label>Tháng/Năm</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-floating">
+                                <input type="password" class="form-control" placeholder="123" maxlength="3" id="ccCVV">
+                                <label>Mã CVV</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="payButton" type="submit" class="btn-custom btn-primary-theme w-100 py-3 mt-4" style="font-size: 1.1rem; border-radius: 12px;">
+                        <i class="bi bi-lock-fill me-2"></i> Xác Nhận & Thanh Toán
+                    </button>
+                    <p class="text-center text-muted mt-3 small">
+                        <i class="bi bi-shield-check text-success me-1"></i> Thông tin của bạn được mã hóa an toàn 256-bit.
+                    </p>
+                </form>
+            </div>
+
+            <!-- === TÓM TẮT ĐƠN HÀNG === -->
+            <div class="checkout-summary-col">
+                <div class="sticky-summary">
+                    <h3 class="fw-bold mb-5">Chi tiết đặt phòng</h3>
+                    
+                    <div class="summary-img-wrap">
+                        <img id="summaryImg" src="" alt="Room Thumbnail">
+                    </div>
+
+                    <h4 id="summaryName" class="fw-bold mb-4">Đang tải...</h4>
+
+                    <div class="summary-row pb-3 mb-3 border-bottom border-secondary border-opacity-50">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-box-arrow-in-right fs-5 me-2" style="color: var(--primary-color);"></i> Nhận phòng
+                        </div>
+                        <span id="summaryCheckin" class="fw-semibold text-white">Chưa chọn</span>
+                    </div>
+
+                    <div class="summary-row pb-4 mb-4 border-bottom border-secondary border-opacity-50">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-box-arrow-right fs-5 me-2" style="color: var(--primary-color);"></i> Trả phòng
+                        </div>
+                        <span id="summaryCheckout" class="fw-semibold text-white">Chưa chọn</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Giá phòng <small id="summaryNightsText">(1 đêm)</small></span>
+                        <span id="summaryPrice">0₫</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Thuế VAT & Phí DV (10%)</span>
+                        <span id="summaryTax">0₫</span>
+                    </div>
+
+                    <div class="summary-row total">
+                        <span class="fs-6 text-white text-uppercase" style="letter-spacing: 1px;">Tổng cộng</span>
+                        <span id="summaryTotal">0₫</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- === SECTION: FOOTER === -->
+    <footer class="footer-custom">
+        <div class="container text-center">
+            <p class="text-muted small mb-0">&copy; 2026 Luxury Resort & Spa. Bản quyền thuộc về Luxury Group.</p>
+        </div>
+    </footer>
+
+    <!-- === MODALS === -->
+    <!-- Modal 1: Quét mã QR MoMo -->
+    <div class="modal fade" id="momoQrModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 20px; overflow: hidden;">
+                <!-- Header hồng chuẩn MoMo -->
+                <div class="modal-header text-white" style="background-color: #a50064; padding: 20px 25px;">
+                    <h5 class="modal-title fw-bold m-0"><i class="bi bi-wallet2 me-2"></i> Thanh toán MoMo</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" id="closeMomoBtn"></button>
+                </div>
+                <div class="modal-body text-center p-5">
+                    <h6 class="text-muted mb-4">Mở ứng dụng MoMo để quét mã thanh toán</h6>
+                    
+                    <div class="bg-light p-3 d-inline-block rounded-4 border mb-4 shadow-sm" style="border: 2px dashed #a50064 !important;">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=LuxuryHotelPayment" alt="MoMo QR Code" class="img-fluid rounded" style="width: 180px;">
+                    </div>
+                    
+                    <h3 id="momoTotalAmount" class="fw-bold mb-1" style="color: #a50064;">0₫</h3>
+                    <p class="text-muted small">Hệ thống sẽ tự động xác nhận đơn hàng.</p>
+                    
+                    <div class="d-flex align-items-center justify-content-center mt-4" style="color: var(--primary-color);">
+                        <div class="spinner-grow spinner-grow-sm me-2" role="status"></div>
+                        <span class="fw-semibold">Đang chờ thanh toán...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Thanh toán thành công -->
+    <div class="modal fade" id="paymentSuccessModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-5 rounded-4 border-0 shadow-lg">
+                <div class="modal-body">
+                    <i class="bi bi-check-circle-fill mb-3" style="font-size: 4rem; color: #10b981;"></i>
+                    <h3 class="fw-bold mb-3" style="color: var(--secondary-color);">Thanh toán thành công!</h3>
+                    <p class="text-muted mb-4 fs-6">Mã xác nhận đặt phòng của bạn là:<br>
+                        <strong id="bookingCodeDisplay" class="d-block mt-2 py-3 bg-light rounded-3 border"
+                            style="color: var(--primary-color); font-size: 1.8rem; letter-spacing: 3px;"></strong>
+                    </p>
+                    <p class="text-muted small mb-4">Hệ thống đã gửi thông tin chi tiết qua email của bạn.</p>
+                    <a href="homepage.html" class="btn-custom btn-primary-theme w-100" style="border-radius: 12px; padding: 14px;">Về Trang Chủ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOTSTRAP & SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./assets/auth.js"></script>
+    <script src="./assets/payment.js"></script>
+
+</body>
+</html>
